@@ -1,0 +1,22 @@
+2013-10-24 12:25:32
+0 seconds for "Installing glpi_plugin_order_configs" @ 2013-10-24 12:25:32
+0 seconds for "Add default order state workflow" @ 2013-10-24 12:25:32
+0 seconds for "Installing glpi_plugin_order_billstates" @ 2013-10-24 12:25:32
+0 seconds for "Installing glpi_plugin_order_billtypes" @ 2013-10-24 12:25:32
+0 seconds for "Installing glpi_plugin_order_orderstates" @ 2013-10-24 12:25:32
+0 seconds for "Installing glpi_plugin_order_orders" @ 2013-10-24 12:25:32
+0 seconds for "Installing glpi_plugin_order_orders_items" @ 2013-10-24 12:25:32
+0 seconds for "Installing glpi_plugin_order_references" @ 2013-10-24 12:25:32
+0 seconds for "Installing glpi_plugin_order_deliverystates" @ 2013-10-24 12:25:32
+0 seconds for "Migrate PluginOrderOrder notifications" @ 2013-10-24 12:25:32
+0 seconds for "Installing glpi_plugin_order_orders_suppliers" @ 2013-10-24 12:25:32
+0 seconds for "Installing glpi_plugin_order_bills" @ 2013-10-24 12:25:32
+0 seconds for "Change of the database layout - glpi_plugin_order_orders_suppliers" @ 2013-10-24 12:25:32
+0 seconds for "Installing glpi_plugin_order_orderpayments" @ 2013-10-24 12:25:32
+0 seconds for "Installing glpi_plugin_order_ordertypes" @ 2013-10-24 12:25:32
+0 seconds for "Installing glpi_plugin_order_others" @ 2013-10-24 12:25:32
+0 seconds for "Installing glpi_plugin_order_othertypes" @ 2013-10-24 12:25:32
+0 seconds for "Installing glpi_plugin_order_preferences" @ 2013-10-24 12:25:32
+0 seconds for "Installing glpi_plugin_order_profiles" @ 2013-10-24 12:25:32
+0 seconds for "Installing glpi_plugin_order_references_suppliers" @ 2013-10-24 12:25:32
+0 seconds for "Installing glpi_plugin_order_surveysuppliers" @ 

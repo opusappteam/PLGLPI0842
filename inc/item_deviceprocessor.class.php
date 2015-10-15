@@ -50,7 +50,9 @@ class Item_DeviceProcessor extends Item_Devices {
                                                                 __('MHz')),
                                         'short name' => __('Frequency'),
                                         'size'       => 10),
-                   'serial'    => array('long name'  => __('Serial number'),
+                   'serial'    => array(
+//                       'long name'  => __('Serial number'),
+                        'long name'  => 'Remarks',
                                         'short name' => __('Serial number'),
                                         'size'       => 20));
    }

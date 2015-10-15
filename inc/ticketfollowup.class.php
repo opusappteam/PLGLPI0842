@@ -50,7 +50,8 @@ class TicketFollowup  extends CommonDBTM {
     * @param $nb : number of item in the type
    **/
    static function getTypeName($nb=0) {
-      return _n('Followup', 'Followups', $nb);
+//      return _n('Followup', 'Followups', $nb);
+      return _n('Followup', 'Notepad', $nb);
    }
 
 
@@ -527,7 +528,8 @@ class TicketFollowup  extends CommonDBTM {
          $this->showFormHeader($options);
 
          echo "<tr class='tab_bg_1'>";
-         echo "<td rowspan='3' class='middle right'>".__('Description')."</td>";
+//         echo "<td rowspan='3' class='middle right'>".__('Description')."</td>";
+           echo "<td rowspan='3' class='middle right'>Notes</td>";
          echo "<td class='center middle' rowspan='3'>";
          echo "<textarea name='content' cols='50' rows='6'>".$this->fields["content"]."</textarea>";
          if ($this->fields["date"]) {
@@ -556,7 +558,8 @@ class TicketFollowup  extends CommonDBTM {
          $this->showFormHeader($options);
 
          echo "<tr class='tab_bg_1'>";
-         echo "<td class='middle right'>".__('Description')."</td>";
+//         echo "<td class='middle right'>".__('Description')."</td>";
+          echo "<td class='middle right'>Notes</td>";
          echo "<td class='center middle'>";
          echo "<textarea name='content' cols='80' rows='6'>".$this->fields["content"]."</textarea>";
          echo "<input type='hidden' name='tickets_id' value='".$this->fields["tickets_id"]."'>";
@@ -624,17 +627,20 @@ class TicketFollowup  extends CommonDBTM {
              && ($ticket->fields["status"] != CommonITILObject::CLOSED)) {
             echo "<div class='center firstbloc'>".
                  "<a class='vsubmit' href='javascript:viewAddFollowup".$ticket->fields['id']."$rand();'>";
-            echo __('Add a new followup')."</a></div>\n";
+//            echo __('Add a new followup')."</a></div>\n";
+           echo __('Add a new notepad')."</a></div>\n"; 
          }
       }
 
       if ($DB->numrows($result) == 0) {
          echo "<table class='tab_cadre_fixe'><tr class='tab_bg_2'>";
-         echo "<th class='b'>" . __('No followup for this ticket.')."</th></tr></table>";
+//         echo "<th class='b'>" . __('No followup for this ticket.')."</th></tr></table>";
+         echo "<th class='b'>" . __('No notepad for this ticket.')."</th></tr></table>";
       } else {
          echo "<table class='tab_cadre_fixehov'>";
          echo "<tr><th>".__('Type')."</th><th>" . __('Date') . "</th>";
-         echo "<th>" . __('Description') . "</th>";//"<th>" . __('Duration') . "</th>";
+//         echo "<th>" . __('Description') . "</th>";//"<th>" . __('Duration') . "</th>";
+         echo "<th>Notes</th>";
          echo "<th>" . __('Writer') . "</th>";
          if ($showprivate) {
             echo "<th>" . __('Private') . "</th>";

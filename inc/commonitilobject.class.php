@@ -3439,7 +3439,8 @@ abstract class CommonITILObject extends CommonDBTM {
          echo "</td><td colspan='2'>&nbsp;</td></tr>";
       }
       echo "<tr class='tab_bg_2'>";
-      echo "<td>".__('Description')."</td><td colspan='3'>";
+      echo "<td>Resolution Description</td><td colspan='3'>";
+//      echo "<td>".__('Description')."</td><td colspan='3'>";
 
       if ($canedit) {
          $rand = mt_rand();

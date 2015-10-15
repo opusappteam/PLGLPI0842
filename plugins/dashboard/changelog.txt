@@ -1,0 +1,48 @@
+Versão 0.6.3:
+
+- Correção do alerta sonoro nas página de chamados por entidade e chamados por grupo;
+
+- Chamados por status nos relatórios de grupos, categorias e SLA;
+
+- Tempo de solução dos chamados nos relatórios de grupos, categorias e SLA;
+
+- Chamados solucionados e fechados no relatórios de técnicos;
+
+- Gráfico de tempo de resolução em Gráficos -> Geral e por Data;
+
+- Tipo de chamados no relatório por SLA;
+
+- Correção do relatório de chamados;
+
+- Atualização do idioma Russo;
+
+- Adição do idioma Português - pt_PT;
+
+- Você agora pode me comprar uma cerveja pelo paypal; :)
+
+- Correção de bugs diversos.
+
+
+Version 0.6.3:
+
+- Correction  in sound alert in tickets by entity and tickets by group pages;
+
+- Tickets by status in groups, categories and SLA reports;
+
+- Tickets Resolution time in groups, categories and SLA reports;
+
+- Tickets resolved and closed in technical reports;
+
+- Resolution time chart in Graphics -> General and by Date;
+
+- Types in the report for SLA;
+
+- Tickets report correction;
+
+- Russian language update;
+
+- Addition of Portuguese language - en_GB;
+
+- Now you can buy me a beer in Paypal;
+
+- Fixed various bugs.

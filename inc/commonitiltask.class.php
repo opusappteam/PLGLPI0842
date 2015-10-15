@@ -960,7 +960,8 @@ abstract class CommonITILTask  extends CommonDBTM {
          $rowspan++;
       }
       echo "<tr class='tab_bg_1'>";
-      echo "<td rowspan='$rowspan' class='middle right'>".__('Description')."</td>";
+//      echo "<td rowspan='$rowspan' class='middle right'>".__('Description')."</td>";
+      echo "<td rowspan='$rowspan' class='middle right'>Task Description</td>";
       echo "<td class='center middle' rowspan='$rowspan'>".
            "<textarea name='content' cols='50' rows='$rowspan'>".$this->fields["content"].
            "</textarea></td>";

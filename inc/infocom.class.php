@@ -1093,12 +1093,12 @@ class Infocom extends CommonDBChild {
 
             echo "<tr><th colspan='4'>".__('Warranty information')."</th></tr>";
             echo "<tr class='tab_bg_1'>";
-            echo "<td>".__('Start date of warranty')."</td><td>";
+            echo "<td><b>".__('Start date of warranty')."</b></td><td>";
             Html::showDateFormItem("warranty_date", $ic->fields["warranty_date"], true,
                                    $editcalendar);
             echo "</td>";
 
-            echo "<td>".__('Warranty duration')."</td><td>";
+            echo "<td><b>".__('Warranty duration')."</b></td><td>";
             if ($withtemplate == 2) {
                // -1 = life
                if ($ic->fields["warranty_duration"] == -1) {

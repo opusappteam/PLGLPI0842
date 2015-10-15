@@ -159,7 +159,7 @@ if (isset($_REQUEST['glpilist_limit'])) {
 if (!defined('DO_NOT_CHECK_HTTP_REFERER')
     && !isCommandLine()
     && isset($_POST) && is_array($_POST) && count($_POST)) {
-   Toolbox::checkValidReferer();
+//   Toolbox::checkValidReferer();
 }
 
 // Security : check CSRF token

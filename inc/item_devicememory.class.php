@@ -51,7 +51,9 @@ class Item_DeviceMemory extends Item_Devices {
                                                              __('Mio')),
                                      'short name' => __('Size'),
                                      'size'       => 10),
-                   'serial' => array('long name'  => __('Serial number'),
+                   'serial' => array(
+//                       'long name'  => __('Serial number'),
+                        'long name'  => 'Remarks',
                                      'short name' => __('Serial number'),
                                      'size'       => 20));
    }

@@ -37,6 +37,15 @@ Session::checkLoginUser();
 $fup   = new TicketFollowup();
 $track = new Ticket();
 
+//if(isset($_POST)){
+//    $x = $_POST;
+//	ksort($x);
+//	echo '<pre>';
+//	print_r($x);
+//	echo '</pre>';
+//	die();
+//}
+
 if (!isset($_GET['id'])) {
    $_GET['id'] = "";
 }

@@ -1747,15 +1747,18 @@ class User extends CommonDBTM {
       echo "</td></tr>";
 
       echo "<tr class='tab_bg_1'>";
-      echo "<td>" .  __('Phone 2') . "</td><td>";
+      // echo "<td>" .  __('Phone 2') . "</td><td>";
+	  echo "<td>Contact</td><td>";
       Html::autocompletionTextField($this, "phone2");
       echo "</td>";
-      echo "<td rowspan='4' class='middle'>" . __('Comments') . "</td>";
+      // echo "<td rowspan='4' class='middle'>" . __('Comments') . "</td>";
+	    echo "<td rowspan='4' class='middle'>Address</td>";
       echo "<td class='center middle' rowspan='4'>";
       echo "<textarea cols='45' rows='6' name='comment' >".$this->fields["comment"]."</textarea>";
       echo "</td></tr>";
 
-      echo "<tr class='tab_bg_1'><td>" . __('Administrative number') . "</td><td>";
+      // echo "<tr class='tab_bg_1'><td>" . __('Administrative number') . "</td><td>";
+	   echo "<tr class='tab_bg_1'><td>Customer ID (SCMS)</td><td>";
       Html::autocompletionTextField($this, "registration_number");
       echo "</td></tr>";
 
@@ -1763,7 +1766,8 @@ class User extends CommonDBTM {
       UserTitle::dropdown(array('value' => $this->fields["usertitles_id"]));
       echo "</td></tr>";
 
-      echo "<tr class='tab_bg_1'><td>" . __('Location') . "</td><td>";
+      // echo "<tr class='tab_bg_1'><td>" . __('Location') . "</td><td>";
+	  echo "<tr class='tab_bg_1'><td>Zone</td><td>";
       if (!empty($ID)) {
          $entities = Profile_User::getUserEntities($ID, true);
          if (count($entities) > 0) {
@@ -1789,7 +1793,8 @@ class User extends CommonDBTM {
          Profile::dropdownUnder(array('name'  => '_profiles_id',
                                       'value' => Profile::getDefault()));
 
-         echo "</td><td>" .  __('Entity') . "</td><td>";
+         // echo "</td><td>" .  __('Entity') . "</td><td>";
+		  echo "</td><td>Company Name</td><td>";
          Entity::dropdown(array('name'                => '_entities_id',
                                 'display_emptychoice' => false,
                                 'entity'              => $_SESSION['glpiactiveentities']));

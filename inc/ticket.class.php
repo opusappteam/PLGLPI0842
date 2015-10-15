@@ -524,13 +524,13 @@ class Ticket extends CommonITILObject {
 
       $ong = array();
       $this->addStandardTab('TicketFollowup',$ong, $options);
-      $this->addStandardTab('TicketValidation', $ong, $options);
+//      $this->addStandardTab('TicketValidation', $ong, $options);
       $this->addStandardTab('TicketTask', $ong, $options);
       $this->addStandardTab(__CLASS__, $ong, $options);
-      $this->addStandardTab('TicketCost', $ong, $options);
+//      $this->addStandardTab('TicketCost', $ong, $options);
       $this->addStandardTab('Document_Item', $ong, $options);
-      $this->addStandardTab('Problem', $ong, $options);
-//       $this->addStandardTab('Change', $ong, $options);
+//      $this->addStandardTab('Problem', $ong, $options);
+////       $this->addStandardTab('Change', $ong, $options);
       $this->addStandardTab('Log', $ong, $options);
 
       return $ong;
@@ -4294,6 +4294,7 @@ class Ticket extends CommonITILObject {
       } else {
          $idpriority = 0;
          echo "<span id='$idajax'>".parent::getPriorityName($this->fields["priority"])."</span>";
+         
       }
 
       if ($canupdate || $canupdate_descr) {
@@ -4321,7 +4322,37 @@ class Ticket extends CommonITILObject {
          echo $tt->getEndHiddenFieldValue('actiontime',$this);
          echo "</td>";
       } else {
-         echo "<th></th><td></td>";
+//         echo "<th></th><td></td>";
+        echo '<th></th><td>';
+        echo '<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">';
+        echo '<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" ></script><script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>';
+        echo '<style>#myIframe{height: 900px;width: 1000px;}</style>';
+        echo '<div id="dialog"><iframe id="myIframe" src=""></iframe><img src="/lenovo/pics/loading.gif" id="loading" style="display: block;margin-left: auto;margin-right: auto;"/></div>';
+        echo isset($_GET['id']) && $_GET['id'] != -1 ? '<a id="dialogBtn" style="cursor: pointer;cursor: hand;">Parts Needed</a>' : NULL;
+        echo '<script>
+            $("#dialog").dialog({
+                autoOpen: false,
+                modal: true,
+                height: 600,
+                width: 1050,
+                open: function(ev, ui){
+                    $("#loading").show();
+                    $("#myIframe").attr("src","/quote/index.php?r=site/index&id='.$_GET['id'].'");
+                }
+            });
+
+            $("#dialogBtn").click(function(){
+                $("#myIframe").hide();
+                $("#dialog").dialog("open");
+            });
+            
+            $("#myIframe").load(function() {
+                $("#loading").hide();
+                $("#myIframe").show();
+            });
+            
+            </script>';
+          echo '</td>';
       }
       echo "<th>".$tt->getBeginHiddenFieldText('locations_id');
       printf(__('%1$s%2$s'), __('Location'), $tt->getMandatoryMark('locations_id'));

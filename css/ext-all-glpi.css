@@ -108,7 +108,7 @@ ul.x-tab-strip li.x-tab-edge {
 
 .x-tab-strip span.x-tab-strip-text {
    font:normal 11px Verdana,Arial,Helvetica,sans-serif;
-   color:#659900;
+   color:black;
    white-space:nowrap;
    cursor:pointer;
    padding:4px 0;
@@ -134,7 +134,7 @@ ul.x-tab-strip li.x-tab-edge {
 
 .x-tab-strip-active span.x-tab-strip-text {
    cursor:default;
-   color:#659900;
+   color:black;
    font-weight:bold;
 }
 

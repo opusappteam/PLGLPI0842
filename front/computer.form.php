@@ -44,6 +44,16 @@ if (!isset($_GET["withtemplate"])) {
 }
 
 $computer = new Computer();
+
+//if(isset($_POST)){
+//    $x = $_POST;
+//	ksort($x);
+//	echo '<pre>';
+//	print_r($x);
+//	echo '</pre>';
+//	die();
+//}
+
 //Add a new computer
 if (isset($_POST["add"])) {
    $computer->check(-1, 'w', $_POST);
@@ -51,7 +61,8 @@ if (isset($_POST["add"])) {
       Event::log($newID, "computers", 4, "inventory",
                  sprintf(__('%1$s adds the item %2$s'), $_SESSION["glpiname"], $_POST["name"]));
    }
-   Html::back();
+//   Html::back();
+      $computer->redirectToList();
 
 // delete a computer
 } else if (isset($_POST["delete"])) {
